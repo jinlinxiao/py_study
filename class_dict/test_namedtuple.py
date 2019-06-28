@@ -37,3 +37,24 @@ def test_1():
     print(user._asdict())
     # OrderedDict([('name', 'kongxx'), ('sex', 'male'), ('age', 22)])
 
+
+def test_2():
+    test_d = {
+        'name': 'name1',
+        'sex': 'male',
+        'age': 22
+    }
+    user = User(**test_d)
+    print(user)
+
+
+def test_unexpect_key():
+    test_e = {
+        'name': 'name1',
+        'sex': 'male',
+        'age': 22,
+        'aaa': 344
+    }
+    user = User(**test_e)
+    print(user)
+
