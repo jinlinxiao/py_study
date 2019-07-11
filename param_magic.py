@@ -12,17 +12,15 @@
 
 
 def send_req(account, product_id, *args, **kwargs):
-    print("account=%s" % account)
-    print("product_id=%s" % product_id)
+    print("account=%s&product_id=%s" % (account, product_id))
     if args:
         print("%s" % args)
     if kwargs:
         print("%s" % kwargs)
 
 
-def send_get(account, product_id, **kwargs):
-    print("account=%s" % account)
-    print("product_id=%s" % product_id)
+def send_get(account, product_id, wait=12, **kwargs):
+    print("account=%s&product_id=%s&wait=%s" % (account, product_id, wait))
     if kwargs:
         print("%s" % kwargs)
 
